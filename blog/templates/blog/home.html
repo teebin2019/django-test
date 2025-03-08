@@ -1,0 +1,17 @@
+<!--blog/home.html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home | DH</title> 
+</head>
+<body>
+    <h1>Hello, Django Tutorial</h1>
+
+    {% for post in posts %}
+      <ul>
+        <li><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></li>
+      </ul>
+    {% endfor %}
+
+</body>
+</html>
